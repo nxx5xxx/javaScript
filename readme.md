@@ -52,3 +52,23 @@
     프로토타입
     class
     생성자 메소드 - constructor method
+
+## [0705](https://github.com/nxx5xxx/javaScript/blob/master/0705.md)
+### 수업내용
+    생성자 메소드
+    생성자 함수
+    객체 리터럴에서 key , value만 갖고오기
+    Static 스태틱
+    getter , setter 게터세터
+    객체의 게터세터
+    클래스의 게터세터
+    캡슐화 : encapsulation
+    상속 : inheritance
+    오버라이딩
+    super keyword
+    static 메소드를 상속받아 overriding하기
+    전역객체 global object 
+    표준 내장 객체
+    Wrapper Object (래퍼 객체)
+    built-in global property
+    String Object
