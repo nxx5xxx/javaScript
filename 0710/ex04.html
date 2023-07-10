@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .style1{
+        color: red;
+        font-size: 16px;
+    }
+    .style2{
+        color:blue;
+        font-size: 22px;
+    }
+</style>
+<body>
+    <p id="text">javaScript</p>
+    <p id="text2" >Spring framework</p>
+    <script>
+        const element1 = document.querySelector("#text");
+        //클래스 부여하기
+        element1.classList.add("style1");
+        //클래스 삭제하기
+        element1.classList.remove("style1");
+
+        const element2 = document.querySelector("#text2");
+        //함수를 ~초간격으로 실행하는것
+    setInterval(()=>{
+        element2.classList.toggle("style2");
+    },600);
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--     
+    dataset 속성 : html에서 사용하는 사용자변수
+    data-사용자변수명 형식으로 지정해서 사용한다
+        ㄴ 이를 자바스크립트에서 사용할 수 있다
+     -->
+    <!-- dataset 속성 -->
+    <button data-cnt="10" data-product="notebook">notebook 구매</button><br><br>
+    <button data-snt="0" data-product="keyboard">keyboard 구매</button><br><br>
+    <script>
+        //이렇게하면 배열로 갖고온다
+        const buttons = document.querySelectorAll("button");
+        console.log(buttons);
+        buttons.forEach((element)=>{
+            console.log(element,"-",element.dataset,"-",element.dataset.cnt,
+                        "-",element.dataset.snt,"-");
+        })
+        /*
+        이것과 같은것
+        for(let i=0; i< buttons.length;i++){
+            console.log(buttons[i]);
+        }
+        */
+    </script>
+</body>
+</html>

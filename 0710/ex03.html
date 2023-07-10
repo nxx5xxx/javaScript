@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <p id="title">"강아지" <span style="color: red;display: none;">JavaScript Class</span></p>
+
+    <p id="textContent"></p>
+    <p id="innerText"></p>
+    <p id="innerHTML"></p>
+
+    <div id="text1">div tag</div>
+    <script>
+        const textC = document.querySelector("#textContent");
+        //스타일집어넣기
+        const text1 = document.getElementById("text1");
+        text1.style.color = 'red';
+        text1.style.background = 'blue';
+        text1.style.fontSize = '30px'
+
+        document.querySelector("#innerHTML").innerHTML = "<strong>고양이</strong>"
+/*
+        const titleElement1 = document.getElementsByTagName("p")[0];
+        console.log(titleElement1.textContent);
+        console.log(titleElement1.innerText);
+        console.log(titleElement1.innerHTML);
+
+        titleElement1.innerText = "우라라라";
+*/
+    </script>
+</body>
+</html>

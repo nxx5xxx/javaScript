@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>javascript study - 1</p>
+    <p>javascript study - 2</p>
+    <p>javascript study - 3</p>
+    <script>
+        const ps = document.querySelectorAll("p");
+        ps.forEach((x)=>{
+            x.addEventListener("click",(x)=>{
+                //화살표 함수에서는 this 이벤트가 적용되는 객체가 아님
+                // this를 사용하지 못하고, event 객체를 parameter로 받아
+                // event.target 속성을 사용해서 이벤트가 적용되는 객체를 찾는다
+                //그냥 this를 쓸시
+                //Cannot read properties of undefined (reading 'color') 에러가뜬다
+                /*
+                if(this.style.color==="red"){
+                    this.style.color = "green";
+                }else{
+                    this.style.color = "red";
+                }
+                */
+                if(x.target.style.color==="red"){
+                    x.target.style.color = "green";
+                }else{
+                    x.target.style.color = "red";
+                }
+            })
+        })
+    </script>
+</body>
+</html>

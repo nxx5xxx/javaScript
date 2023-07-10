@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clicked()"> 여기를 클릭!!!</button><br>
+    <button ondblclick="dblclicked()"> 여기를 더블클릭!!!</button><br>
+    <button onmouseover="mouseover()"> 여기 마우스를 올리세용!!!</button><br><br>
+
+    <input type="text" onkeydown="keydown()" placeholder="키다운 아무버튼이나 눌러보세요"> <br>
+    <input type="text" onkeyup="keyup()" placeholder="키업 아무버튼이나 눌러보세요"> <br>
+    <input type="text" onkeypress="keypress()" placeholder="프레스 아무버튼이나 눌러보세요"> <br>
+
+    <input type="text" onfocus="onfo()" placeholder="클릭하시면 (포커싱을하면) 함수 작동"> <br>
+
+    <button id="btn1"  >스크립트에서 처리</button><br>
+    <input type="text" id="focus1" value="포커싱 스크립트처리" />
+    <script>
+        function clicked(){
+            alert("클릭되었습니다");
+        }
+        function dblclicked(){
+            alert("더블 클릭되었습니다");
+        }
+        function mouseover(){
+            alert("마우스를 올렸습니다");
+        }
+        function keydown(){
+            alert("다운 키보드를누름");
+        }
+        function keyup(){
+            alert("업 키보드를누름");
+        }
+        // function onfo(){
+        //     alert("포커스가됨");
+        // }
+        const btn1 = document.querySelector("#btn1");
+        btn1.onclick = function mouseOverBtn1(){
+            alert("스크립트에서 온클릭처리");
+        }
+
+        const focus1 = document.querySelector("#focus1");
+
+        focus1.onfocus = function(){
+            alert("포커싱됨");
+        }
+
+        //이런식으로도 가능하다
+        //focus1.onfocus = onFocusEvent;
+        //function onFocusEvent(){alert('포커스이벤트발생')};
+    </script>
+</body>
+</html>

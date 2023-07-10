@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+
+</head>
+<body>
+<!-- 바디의 자식노드는 h1과 script태그 두가 -->
+    <!-- nods 추가 삭제 -->
+    <h1> java script node </h1>
+    <p>Spring Framework</p>
+    <p>Spring Framework</p>
+    <p>Spring Framework</p>
+    <p>Spring Framework</p>
+    <p>Spring Framework</p>
+    <script>
+    /*
+        const ps = document.querySelectorAll("p");
+        ps.forEach((pTage) =>{
+            pTage.parentNode.removeChild(pTage);
+
+        })
+    */
+   
+    //바디에있는 모든 child노드
+        const bodyChildren = document.body.childNodes;
+   /*
+        bodyChildren.forEach((node)=>{
+            console.log(node.nodeName);
+        })
+    //for문과 유사한작동을함(문서노드 어트리뷰트노드 속성노드~~~)
+        console.log(bodyChildren);
+    */
+
+        //p태그만 갖고오기
+        bodyChildren.forEach((node2)=>{
+            console.log(node2.nodeName);
+            //nodeName이 p인 node들을 삭제함
+            if(node2.nodeName==='P'){
+                node2.parentNode.removeChild(node2);
+            }
+
+        })   
+
+
+        // a tag 생성하기
+        const element1 = document.createElement("a");
+        // text node 생성하기
+        const textNode1 = document.createTextNode("네이버");
+        // 속성(attribute) node 추가하기
+        const hrefAttr1 = document.createAttribute("href");
+        // href 속성에 url 추가하기(값 추가하기)
+        hrefAttr1.value = "https://www.naver.com";
+
+        // a tag에 text 추가하기
+        element1.appendChild(textNode1);
+        // a tag에 href 속성 추가하기
+        element1.setAttributeNode(hrefAttr1);
+
+        // body에 자식 node로 a태그 추가하기
+        document.body.appendChild(element1);
+        
+        //h1태그 삭제하기
+        const elementH1 = document.querySelector("h1");
+        elementH1.parentNode.removeChild(elementH1);
+    </script>
+</body>
+</html>

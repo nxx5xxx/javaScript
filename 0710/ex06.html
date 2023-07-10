@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .font32{font-size: 32px;}
+
+    .red{color:red;}
+</style>
+<body>
+    <a href="https://www.naver.com">네이버</a><br>
+
+    <!-- 32=2em 기본폰트는 16px-->
+    <a id="font32" class="font32" href="https://www.nate.com">네이트</a>
+    <script>
+        //속성의 재설정
+        const element1 = document.querySelector("a");
+        console.log(element1.getAttribute("href"));
+        element1.setAttribute("href", "https://google.com");
+        console.log(element1.getAttribute("href"));
+        //target은 페이지가 열릴위치
+        /*
+            _blank : 링크된 문서를 새로운 윈도우나 탭(tab)에서 오픈함.
+            _self : 링크된 문서를 링크가 위치한 현재 프레임에서 오픈함.기본값 생략가능
+            _parent	: 링크된 문서를 현재 프레임의 부모 프레임에서 오픈함.
+            _top : 링크된 문서를 현재 윈도우 전체에서 오픈함.
+            프레임 이름	: 링크된 문서를 명시된 프레임에서 오픈함.
+        */
+        element1.setAttribute("target","_blank");
+        element1.removeAttribute("href");
+
+        const element2 = document.getElementById("font32");
+        //클래스변경
+        element2.setAttribute("class","red");
+        //클래스추가
+        element2.classList.add("font32");
+
+    </script>
+</body>
+</html>

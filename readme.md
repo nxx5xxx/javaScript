@@ -104,3 +104,26 @@
     역직렬화 - 12.js
     DOM - document object model
     js_project fontawesome
+
+## [0710](https://github.com/nxx5xxx/javaScript/blob/master/0710.md)
+### 수업내용
+    DOMtree
+    node탐색
+    3가지 Get메소드
+    getElement
+    querySelector
+    요소노드.content속성
+    스타일집어넣기
+    class 추가 ,삭제 ,토글
+    dataset
+    속성의 재설정 setAttribute
+    속성불러오기 getAttribute
+    속성 삭제 removeAttribute
+    노드의 생성과 연결 createElement,createTextNode,createAttribute,removeChild
+    form접근,value값 바꾸기,checkbox,select,file
+    이벤트 (onclick등등)
+    이벤트 리스너 - 이벤트가 어느위치에 있는지를 감지하는것이 리스너
+    이벤트속성 (clientX,pageX,screenX) 등등
+    preventDefault
+    this
+    font-awesome

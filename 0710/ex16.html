@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.google.com">구글</a>
+    <script>
+        const a1 = document.querySelector("a");
+        a1.addEventListener("click",(x)=>{
+            //preventDefault 해당 element에서 click 이벤트가 발생하지 않는다
+            x.preventDefault();
+        });
+    </script>
+</body>
+</html>

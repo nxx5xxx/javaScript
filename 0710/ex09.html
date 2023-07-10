@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        <label for="username">이름</label>
+        <input type="text" id="username" name="username" value="기본값"><br>
+        <label for="age">나이</label>
+        <input type="text" id="age" name="age"><br>
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" name="pw"><br>
+        <label for="sex">성별</label>
+        <select id="sex" name="sex">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select><br>
+        <!-- 가로30 세로20 -->
+        <textarea name="text1" id="text1" cols="30" rows="20"></textarea><br>
+        <input type="submit" name="btn1" value="보내기" />
+    </form>
+
+
+    <script>
+        const f1 = document.f1;
+        //네임이f1인것의 엘리먼츠 갖고오기
+        console.log(f1.elements);
+        //username의 엘리먼츠
+        console.log(f1.elements.username);
+        //btn1의 엘리먼트
+        console.log(f1.elements.btn1);
+        //btn1의 밸류값
+        console.log(f1.elements.btn1.value);
+
+        //밸류값바꾸기
+        f1.elements.username.value = "기본값 바꿔보기"
+
+    </script>
+</body>
+</html>

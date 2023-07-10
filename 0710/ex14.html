@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" />
+    <button> CLICK!!!</button><br>
+
+    <script>
+        const btn1 = document.querySelector("button");
+        btn1.addEventListener("click", function(){
+            //btn1을 감지하고있다가 클릭이되면 뒤에 이벤트를 실행하라 라는 의미
+            alert("클릭 이벤트 발생");
+        });
+        const input1 = document.querySelector("input");
+        input1.addEventListener("keydown", function(){
+            alert("key down 이벤트 발생");
+
+        });
+
+        const keydownFunct = function(){
+            alert('keydown 이벤트 발생2');
+        }
+        // 함수를 먼저정의하고 addEventListner를 작성하는것
+        input1.addEventListener("keydown",keydownFunct);
+    </script>
+</body>
+</html>

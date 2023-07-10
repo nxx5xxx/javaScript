@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- checkbox에 자바스크립트 적용해보기 -->
+    <form>
+        <label>
+        <input type="checkbox" value="apple">사과
+        </label>
+        <label>
+        <input type="checkbox" value="watermelon" checked>수박
+        </label>
+        <label for="mango">사과</label>
+        <input type="checkbox" id="mango" value="mango">
+        <label for="strawberry">사과</label>
+        <input type="checkbox" id="strawberry" value="strawberry" checked>
+    </form>
+
+    <script>
+        // input태그의 type속성의 값이 checkbox인 element 들 가져오기
+        const inputs = document.querySelectorAll("input[type='checkbox']")
+        inputs.forEach((element)=>{
+            //check가 된 input엘리먼트만 출력하기
+            if(element.checked){
+                console.log(element.value);
+            }
+        });
+        console.log('====================');
+        // 모두 check하기
+        inputs.forEach((element)=>{
+            element.checked = true;
+        })
+
+
+        inputs.forEach((element)=>{
+            //check가 된 input엘리먼트만 출력하기
+            if(element.checked){
+                console.log(element.value);
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        <input type="file" name="uploaded"><br>
+        <input type="submit" value="전송">
+        <input type="button" onclick="getFile()" value="파일올린후 클릭 콘솔"/>
+    </form>
+    <script>
+    function getFile(){
+        const files = document.f1.uploaded.files;
+        console.log(files);
+        
+        if(files.length!=0){
+            console.log("파일 이름",files[0].name);
+            console.log("파일 사이즈",files[0].size,"byte");
+            console.log("파일 타입",files[0].type);
+        }
+    }
+    //submit() : 서브밋 버튼을 자동으로 계속 클릭하는 효과
+    //document.forms[0].submit();
+
+    
+    </script>
+</body>
+</html>
