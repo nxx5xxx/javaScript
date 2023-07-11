@@ -127,3 +127,8 @@
     preventDefault
     this
     font-awesome
+
+## [0711](https://github.com/nxx5xxx/javaScript/blob/master/0711.md)
+### 수업내용
+    js 스크롤을 활용한 페이지 이동
+#### [스프링레거시2 (sts툴을 이용) ](https://github.com/nxx5xxx/sts/blob/master/readme.md)
